@@ -46,13 +46,14 @@ listElement.addEventListener('click', (e) => {
     } else if (type === 'remove') {
       note.splice(index, 1)
     }
+
     render()
   }
 })
 
 function myFunction(note, index) {
   return `
-  <li class="list-gpoup__item">
+  <li class="list-gpoup__item" data-aos="zoom-in" data-aos-duration="800">
     <span class="${note.complited ? 'complited' : ''}">${note.title}</span>
     <span>
       <span class="btn--succes" data-index="${index}" data-type="add"></span>
